@@ -1,3 +1,6 @@
+
+# ebs volume create and attach to ec2 instance 
+
 resource "aws_ebs_volume" "ebs1" {
   availability_zone = var.zone
   size              = var.ebssize
@@ -6,6 +9,7 @@ resource "aws_ebs_volume" "ebs1" {
    Name = "${var.product}.${var.environment}-ebs"
   }
 }
+
 
 
 resource "aws_volume_attachment" "ebs1_att" {
